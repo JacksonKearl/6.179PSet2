@@ -1,0 +1,6 @@
+Enter starting elo: Enter number of tournaments: Enter number of games: 
+Tournament 1, Game 1: J beat G
+
+Final Stats for Tournament 1: 
+	J: 1016 (1-0-0)
+	G: 984 (0-1-0)

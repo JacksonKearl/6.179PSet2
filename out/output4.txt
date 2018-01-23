@@ -1,0 +1,17 @@
+Enter starting elo: Enter number of tournaments: Enter number of games: 
+Tournament 1, Game 1: N beat A
+Tournament 1, Game 2: A beat X
+Tournament 1, Game 3: X beat E
+Tournament 1, Game 4: E beat N
+Tournament 1, Game 5: X beat N
+Tournament 1, Game 6: N beat E
+Tournament 1, Game 7: N beat E
+Tournament 1, Game 8: E beat N
+Tournament 1, Game 9: N beat X
+Tournament 1, Game 10: N beat X
+
+Final Stats for Tournament 1: 
+	N: 1031 (5-3-0)
+	A: 1000 (1-1-0)
+	E: 985 (2-3-0)
+	X: 984 (2-3-0)

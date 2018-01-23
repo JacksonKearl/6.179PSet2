@@ -1,0 +1,13 @@
+1000
+2
+5
+N beat A
+A beat X
+X beat E
+E beat N
+X beat N
+N beat E
+N beat E
+E beat N
+N beat X
+N beat X

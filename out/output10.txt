@@ -1,0 +1,6 @@
+Enter starting elo: Enter number of tournaments: Enter number of games: 
+Tournament 1, Game 1: A beat B
+
+Final Stats for Tournament 1: 
+	A: 1046 (3-0-0)
+	B: 954 (0-3-0)
