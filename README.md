@@ -25,7 +25,6 @@ stats change as the player interacts with other players.
 
 This is the easiest class to implement, as there is only a simple output function.
 
-**PlayerStats.h**
 ```c++
 class PlayerStats
 {
@@ -118,6 +117,22 @@ class Tournament
    - Note that we pass `PlayerStats` objects to `simulateMatch`, not `Player`s themselves.
    - We should use the `statsOf` method to get the `PlayerStats` from a `Player`.
    - It is important that you save an initial copy of the player's stats, so that you do not compute the second player's change in elo based on the updates stats of the first player.
+- ```bool playerStatComparator(PlayerWithStats p1, PlayerWithStats p2)```
+   - This is the last helper function we need, before the final step of printing out all the members in a tournament in order of decending elo
+   - This function needs to be defined after the `Player` and `PlayerStats` declarations, or else you'll get a weird compile error.
+   - This function is a friend of `PlayerStats`, so it shouldn't be difficult to get it to compare two `(Player,PlayerStats)` pairs by their `PlayerStats`'s elo. Refernce the std::pair documentation for more info on how to access elements of a pair.
+   
+   
+#### std::ostream &operator<<(std::ostream &os, const Tournament &t)
+Wowee! This function gets a whole h4 to itself.
+
+There are three basic steps to implementing this function:
+1. Create a vector of PlayerWithStats objects. This can be done by combining `allPlayers` and `statsOf`.
+2. Sort that vector. This can be done with std::sort (look it up!), and the `playerStatComparator` defined above.
+3. Print that vector. This is basic `<<` chaining that youve done 1,000 times by now.
+
+
+# All Done!
 
 ### Implementation: Step by Step
 Coming soon, maybe.
