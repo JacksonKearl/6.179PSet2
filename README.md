@@ -76,9 +76,9 @@ class Game
 
 - ```static Game victory(Player winner, Player loser);``` & ```static Game tie(Player p1, Player p2);```
    - These are static methods, which means they have no existing object to operate on. Rather, they return a new `Player`. We can simply construct one with the code already provided, and return that constructed object as is.
--```friend std::ostream &operator<<(std::ostream &os, Game &g);```
+- ```friend std::ostream &operator<<(std::ostream &os, Game &g);```
    - Another fairly simple case of chaining a bunch of `<<` operations together. In this case, we just delegate the operation to the `Player`'s `<<` operator and let it handle how to print a player for us.
--```std::istream &operator>>(std::istream &is, Game &g)```
+- ```std::istream &operator>>(std::istream &is, Game &g)```
    - (Implemented in the `Main.cpp` section). Here we do not havw access to the constructors for Players, but as the previously created `victory` and `tie` classes are public, we can call them and simply assign the result to `g`. As `g` was passed by reference, the assigment will be reflected to the outside world.
 
 #### Tournament
