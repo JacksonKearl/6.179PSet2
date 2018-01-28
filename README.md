@@ -19,6 +19,9 @@ This walkthrough will only deal with the most basic functionallity possible (no 
 
 ### Implementation: Tips and Tricks
 
+#### Player
+The only thing we need to do for PLayer is tell the map what order to store its Player keys in.
+
 #### PlayerStats
 This class is responsible for maintaining each player's stats for a given tournament and simulating how these 
 stats change as the player interacts with other players.
@@ -120,7 +123,7 @@ class Tournament
 - ```bool playerStatComparator(PlayerWithStats p1, PlayerWithStats p2)```
    - This is the last helper function we need, before the final step of printing out all the members in a tournament in order of decending elo
    - This function needs to be defined after the `Player` and `PlayerStats` declarations, or else you'll get a weird compile error.
-   - This function is a friend of `PlayerStats`, so it shouldn't be difficult to get it to compare two `(Player,PlayerStats)` pairs by their `PlayerStats`'s elo. Refernce the std::pair documentation for more info on how to access elements of a pair.
+   - This function is a friend of `PlayerStats`, so it shouldn't be difficult to get it to compare two `(Player,PlayerStats)` pairs by their `PlayerStats`'s elo. Refernce the `std::pair` documentation for more info on how to access elements of a pair.
    
    
 #### std::ostream &operator<<(std::ostream &os, const Tournament &t)
