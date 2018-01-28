@@ -113,8 +113,10 @@ class Tournament
 - ```std::vector<Player> allPlayers() const;```
    - Pretty simple function which just returns all the keys in the map in a vector. Reference materials for this should be easy to find
 - ```void execute(Game);```
-   - This updates the tournpments `players` map via computing new Elo's for the two players in the game. We can use the `simulateMatch` to determine what each player will have. To use player stats to compute the stats
+   - This updates the tournpments `players` map via computing new Elo's for the two players in the game. We can use the `simulateMatch` to determine what each player will have. To use `simulateMatch` to compute the stats
    a player with stats `a` will have after losing to a player with stats `b`, use `new_stats = a.simulateMatch(b, LOSS)`
+   - Note that we pass `PlayerStats` objects to `simulateMatch`, not `Player`s themselves.
+   - We should use the `statsOf` method to get the `PlayerStats` from a `Player`.
    - It is important that you save an initial copy of the player's stats, so that you do not compute the second player's change in elo based on the updates stats of the first player.
 
 ### Implementation: Step by Step
