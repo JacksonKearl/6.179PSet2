@@ -128,7 +128,7 @@ Wowee! This function gets a whole h4 to itself.
 
 There are three basic steps to implementing this function:
 1. Create a vector of PlayerWithStats objects. This can be done by combining `allPlayers` and `statsOf`.
-2. Sort that vector. This can be done with std::sort (look it up!), and the `playerStatComparator` defined above.
+2. Sort that vector. This can be done with `std::sort` (look it up!), and the `playerStatComparator` defined above.
 3. Print that vector. This is basic `<<` chaining that youve done 1,000 times by now.
 
 
