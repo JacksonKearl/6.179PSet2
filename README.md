@@ -74,7 +74,7 @@ class Game
 };
 ```
 
-- ```static Game victory(Player winner, Player loser);``` & ``static Game tie(Player p1, Player p2);```
+- ```static Game victory(Player winner, Player loser);``` & ```static Game tie(Player p1, Player p2);```
    - These are static methods, which means they have no existing object to operate on. Rather, they return a new `Player`. We can simply construct one with the code already provided, and return that constructed object as is.
 -```friend std::ostream &operator<<(std::ostream &os, Game &g);```
    - Another fairly simple case of chaining a bunch of `<<` operations together. In this case, we just delegate the operation to the `Player`'s `<<` operator and let it handle how to print a player for us.
